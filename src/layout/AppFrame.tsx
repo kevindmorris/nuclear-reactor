@@ -16,7 +16,7 @@ import {
 
 import React from "react";
 import { ExpandMoreRounded, MenuRounded } from "@mui/icons-material";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 import logo from "../assets/react.svg";
 
@@ -67,9 +67,9 @@ export default function AppFrame() {
             <MenuRounded fontSize="small" />
           </IconButton>
 
-          <a href="/" style={{ height: "1.5em" }}>
+          <Link to="/" style={{ height: "1.5em" }}>
             <img src={logo} alt="React" style={{ height: "100%" }} />
-          </a>
+          </Link>
 
           <Box
             sx={{
@@ -167,9 +167,9 @@ function DrawerMobile({
           gap: theme.spacing(1),
         }}
       >
-        <a href="/" style={{ height: "1.5em" }}>
+        <Link to="/" style={{ height: "1.5em" }}>
           <img src={logo} alt="React" style={{ height: "100%" }} />
-        </a>
+        </Link>
 
         <Divider orientation="vertical" flexItem />
         <div
