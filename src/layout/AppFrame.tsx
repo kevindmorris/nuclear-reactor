@@ -18,6 +18,8 @@ import React from "react";
 import { ExpandMoreRounded, MenuRounded } from "@mui/icons-material";
 import { Outlet, useNavigate } from "react-router-dom";
 
+import logo from "../assets/react.svg";
+
 const drawerWidth = "30vw";
 const drawerMinWidth = 200;
 const drawerMaxWidth = 240;
@@ -66,7 +68,7 @@ export default function AppFrame() {
           </IconButton>
 
           <a href="/" style={{ height: "1.5em" }}>
-            <img src="/react.svg" alt="React" style={{ height: "100%" }} />
+            <img src={logo} alt="React" style={{ height: "100%" }} />
           </a>
 
           <Box
@@ -166,7 +168,7 @@ function DrawerMobile({
         }}
       >
         <a href="/" style={{ height: "1.5em" }}>
-          <img src="/react.svg" alt="React" style={{ height: "100%" }} />
+          <img src={logo} alt="React" style={{ height: "100%" }} />
         </a>
 
         <Divider orientation="vertical" flexItem />
