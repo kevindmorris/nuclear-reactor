@@ -7,35 +7,38 @@ import Profiler from "../pages/components/Profiler";
 import Suspense from "../pages/components/Suspense";
 import StrictMode from "../pages/components/StrictMode";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <AppFrame />,
-    errorElement: <ErrorPage />,
-    children: [
-      { path: "*", element: <ErrorPage /> },
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/components/fragment",
-        element: <Fragment />,
-      },
-      {
-        path: "/components/profiler",
-        element: <Profiler />,
-      },
-      {
-        path: "/components/strictmode",
-        element: <StrictMode />,
-      },
-      {
-        path: "/components/suspense",
-        element: <Suspense />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <AppFrame />,
+      errorElement: <ErrorPage />,
+      children: [
+        { path: "*", element: <ErrorPage /> },
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/components/fragment",
+          element: <Fragment />,
+        },
+        {
+          path: "/components/profiler",
+          element: <Profiler />,
+        },
+        {
+          path: "/components/strictmode",
+          element: <StrictMode />,
+        },
+        {
+          path: "/components/suspense",
+          element: <Suspense />,
+        },
+      ],
+    },
+  ],
+  { basename: import.meta.env.DEV ? "/" : "/react-vite-gh-pages/" }
+);
 
 export default router;
